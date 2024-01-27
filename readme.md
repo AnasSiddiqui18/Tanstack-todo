@@ -1,4 +1,4 @@
-# React Query Course
+# Todo App Using Tanstack Query
 
 ## How to setup project
 
