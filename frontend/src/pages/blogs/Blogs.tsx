@@ -19,8 +19,6 @@ export function Blogs() {
 
   const cardRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  //   console.log(cardRefs.current); // Log the current object containing key-value pairs
-
   useEffect(() => {
     if (blogs && blogs.length > 0) {
       const newBlogId = blogs[blogs?.length - 1]._id;
@@ -28,18 +26,11 @@ export function Blogs() {
 
       if (newBlogId && divToAnimate) {
         const tl = gsap.timeline();
-        tl.fromTo(
-          divToAnimate,
-          {
-            y: 50,
-            opacity: 0,
-            duration: 0.5,
-          },
-          {
-            y: 0,
-            opacity: 1,
-          }
-        );
+        tl.from(divToAnimate, {
+          y: 100,
+          opacity: 0,
+          duration: 0.5,
+        });
       }
     }
   }, [blogs]);
