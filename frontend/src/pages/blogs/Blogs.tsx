@@ -19,7 +19,7 @@ export function Blogs() {
 
   const cardRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
-  console.log(cardRefs.current); // Log the current object containing key-value pairs
+  //   console.log(cardRefs.current); // Log the current object containing key-value pairs
 
   useEffect(() => {
     if (blogs && blogs.length > 0) {

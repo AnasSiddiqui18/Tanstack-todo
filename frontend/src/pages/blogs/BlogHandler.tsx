@@ -118,10 +118,10 @@ export const BlogHandler: React.FC<BlogHandlerProps> = ({
   }, [reset]);
 
   useEffect(() => {
-    if (!open) {
+    if (!open && !isUpdate) {
       resetFormValues();
     }
-  }, [resetFormValues, open]);
+  }, [resetFormValues, open, isUpdate]);
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>

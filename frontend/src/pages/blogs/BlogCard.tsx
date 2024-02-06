@@ -41,12 +41,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog, cardRefs }) => {
 
   const deleteBlogHandler = (id: string) => {
     deleteBlogMutation.mutate(id);
-    cache.invalidateQueries({
-      queryKey: ["BLOGS"],
-    });
   };
-
-  // console.log(cardRefs); // Log the current object containing key-value pairs
 
   return (
     <div
