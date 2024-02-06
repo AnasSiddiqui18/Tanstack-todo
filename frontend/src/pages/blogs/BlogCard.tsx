@@ -12,8 +12,6 @@ export interface BlogCardProps {
 }
 
 export const BlogCard: React.FC<BlogCardProps> = ({ blog, cardRefs }) => {
-  // console.log(cardRefs.current);
-
   const cache = useQueryClient();
 
   const deleteBlogMutation = useMutation({
